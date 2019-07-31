@@ -24,8 +24,12 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res)=>{
     res.render("index")
 
+});
+
+app.get("/list", async (req, res)=>{
+    res.render("list")
 })
 
 app.listen(port, ()=>{
     console.log("hello in console")
-})
+});
