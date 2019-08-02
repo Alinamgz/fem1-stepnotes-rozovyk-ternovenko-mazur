@@ -12,13 +12,19 @@
 <div class="container">
     <h3>Зроби свiй список, малий:</h3>
     <div class="form-group">
-        <label for="note-title">Title</label>
-        <input type="text" class="form-control" id="note-title" value="${title}">
+        <input type="text" class="form-control" placeholder="Створи ім'я свого списка">
     </div>
     <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <p><button type="button" class="btn btn-primary" id="addNewItem">Додати пункт</button></p>
+    <input type="text" class="form-control" id="writeListItem" placeholder="Захопити світ, випити кави, знайти кота">
 </div>
-    <button></button>
+    <div id="listArea" class="m-3">
+        сюда будут добавляться списки дел
+    </div>
+    <button class="btn btn-danger" id="cancelNewList">Охрана, Атмєна! </button>
+    <button class="btn btn-success"  id="saveNewList"> Яна! Записуй! </button>
+
 </div>
+<script src="/js/listcreate.js"></script>
 </body>
 </html>
