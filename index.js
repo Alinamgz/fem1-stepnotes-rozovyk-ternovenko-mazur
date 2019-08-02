@@ -26,9 +26,10 @@ app.get("/", async (req, res)=>{
 
 });
 
-app.get("/list", async (req, res)=>{
-    res.render("list")
-})
+//перехожу на страницу с созданием списка
+app.get("/listcreate", async (req, res)=>{
+    res.render("listcreate")
+});
 
 app.listen(port, ()=>{
     console.log("hello in console")
