@@ -35,7 +35,7 @@ addNewItem.addEventListener('click', function () {
 function addItems() {
     let lineWithItems = "";
     for (key in todoList){
-        lineWithItems += `<div data-item="${Math.floor(100 + Math.random() * 900)}"><input type ="checkbox"><span class="ml-2">${todoList[key].todo}</span></div>`
+        lineWithItems += `<div class="list-group-item" data-item="item${Math.floor(100 + Math.random() * 900)}"><input type ="checkbox"><span class="ml-2">${todoList[key].todo}</span><span class="ml-5">X</span></div>`
     }
     listArea.innerHTML = lineWithItems;
 }
