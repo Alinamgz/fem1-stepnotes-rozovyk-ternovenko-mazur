@@ -5,7 +5,6 @@ const writeListItem = document.querySelector('#writeListItem');
 const listArea = document.querySelector('#listArea');
 const todoList = [];
 
-
 cancelNewList.addEventListener('click', function(){
 //нужна ф-ция  очистить массив с заполненными пунктами, а так же очистить инпуты нзвания заметки и пункт
     //перейти на гавную стараницу
@@ -35,7 +34,23 @@ addNewItem.addEventListener('click', function () {
 function addItems() {
     let lineWithItems = "";
     for (key in todoList){
-        lineWithItems += `<div class="list-group-item" data-item="item${Math.floor(100 + Math.random() * 900)}"><input type ="checkbox"><span class="ml-2">${todoList[key].todo}</span><span class="ml-5">X</span></div>`
+        lineWithItems += `<div class="list-group-item" data-item="item${Math.floor(100 + Math.random() * 900)}"><label><input type ="checkbox"><span class="ml-2">${todoList[key].todo}</span></label><span class="ml-5 remove-item">X</span></div>`
     }
     listArea.innerHTML = lineWithItems;
+}
+
+listArea.addEventListener('click', function (e) {
+    if(e.target.classList.contains("remove-item")) {
+    console.dir(e.target.parentNode);
+        e.target.parentNode.remove();
+        console.log(todoList);
+    }
+});
+
+{
+    id;
+    type: "list",
+    title:
+    body:[{text: checked},{//...}],
+
 }
